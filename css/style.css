@@ -137,11 +137,13 @@ main .hero-text .participate a {
   /* background-color: rgb(85, 0, 0);
   background-color: rgb(8, 9, 61, 0.8);
   background-color: rgba(0, 0, 0, 0.7); */
+  transition: 0.2s;
 }
 
 main .hero-text .participate a:hover {
-  background-color: rgba(14, 16, 100, 0.8);
-  transition: 0.2s;
+  /* background-color: rgba(14, 16, 100, 0.8); */
+
+  color: goldenrod;
 }
 
 main .hero-text .explore {
@@ -166,11 +168,12 @@ main .hero-text .explore a {
   /* background-color: rgb(61, 8, 8, 0.8);
   border-radius: 5px; */
   /* background-color: rgb(79, 8, 194); */
+  transition: 0.2s;
 }
 
 main .hero-text .explore a:hover {
-  background-color: rgba(94, 14, 14, 0.8);
-  transition: 0.2s;
+  /* background-color: rgba(94, 14, 14, 0.8); */
+  color: goldenrod;
 }
 
 /*FOOTER*/
