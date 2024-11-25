@@ -7,7 +7,7 @@ body {
   background-repeat: no-repeat; /* Prevents the image from repeating */
   color: white;
   height: 100svh;
-  overflow: hidden; /* Mencegah scrolling */
+  /* overflow: hidden;  */
 }
 
 body a {
@@ -17,7 +17,7 @@ body a {
 /*HEADER*/
 header {
   width: 100vw;
-  height: 15vh;
+  height: 15svh;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -94,7 +94,7 @@ header nav .active {
 /*MAIN*/
 main {
   width: 100vw; /*main*/
-  height: 75vh;
+  height: 75svh;
 }
 
 main .hero-text {
@@ -203,7 +203,7 @@ main .hero-text .explore a:hover {
 /*FOOTER*/
 footer {
   width: 100vw;
-  height: 10vh;
+  height: 10svh;
   display: flex;
   background-color: rgb(0, 0, 0, 0.7);
 }
@@ -286,17 +286,17 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header {
     width: 100vw;
-    height: 15vh;
+    height: 15svh;
   }
 
   main {
     width: 100vw;
-    height: 75vh;
+    height: 75svh;
   }
 
   footer {
     width: 100vw;
-    height: 10vh;
+    height: 10svh;
   }
 }
 
@@ -315,17 +315,17 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header {
     width: 100vw;
-    height: 15vh;
+    height: 15svh;
   }
 
   main {
     width: 100vw;
-    height: 75vh;
+    height: 75svh;
   }
 
   footer {
     width: 100vw;
-    height: 10vh;
+    height: 10svh;
   }
 }
 
@@ -337,17 +337,17 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header {
     width: 100vw;
-    height: 15vh;
+    height: 15svh;
   }
 
   main {
     width: 100vw;
-    height: 75vh;
+    height: 75svh;
   }
 
   footer {
     width: 100vw;
-    height: 10vh;
+    height: 10svh;
   }
 
   nav {
