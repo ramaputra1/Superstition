@@ -40,6 +40,9 @@ header .version p {
   font-weight: 200;
   font-style: italic;
   font-family: "Times New Roman", Times, serif;
+  /* background-color: cadetblue; */
+  padding: 0 1.5em;
+  text-align: center;
 }
 header .version p span {
   color: rgb(207, 0, 0);
@@ -124,7 +127,6 @@ main .content .content-box .content-box-resp {
   font-size: 0.8rem;
   /* font-family: "Playfair Display"; */
   font-family: "Poppins";
-  /* background-color: red; */
 }
 
 main .content .content-box .content-box-resp .content-section {
@@ -196,7 +198,7 @@ main .nav-main {
   display: flex;
   justify-content: center;
   align-items: end;
-  padding: 0e 0.5em;
+  padding: 0 0.5em;
   /* background-color: rgb(255, 0, 153); */
 }
 
@@ -213,6 +215,7 @@ main .nav-main .items {
 
 main .nav-main .items .btn-show {
   border: 1px solid rgb(0, 0, 0, 0.3);
+  /* background-color: rgba(26, 17, 17, 0.8); */
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   width: 100%;
@@ -225,7 +228,7 @@ main .nav-main .items .btn-show {
 
 main .nav-main .items .btn-show button {
   border: none;
-  /* background-color: rgb(255, 255, 255, 0.8); */
+
   cursor: pointer;
   font-size: 0.9rem;
 }
@@ -233,6 +236,7 @@ main .nav-main .items .btn-show button {
 main .nav-main .items .data {
   width: 100%;
   height: 60%;
+  /* background-color: red; */
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -241,7 +245,7 @@ main .nav-main .items .data {
 
 main .nav-main .items .data .data-box {
   width: fit-content;
-  height: fit-content;
+  height: 60%;
   display: flex;
   flex-direction: column;
   padding: 20px 20px;
@@ -284,7 +288,8 @@ main .nav-main .items .nav-participate .box-participate {
 }
 
 main .nav-main .items .nav-participate .box-participate a {
-  padding: 20px 20px;
+  padding: 1em 1em;
+  font-size: 1rem;
   text-transform: uppercase;
   background-color: rgb(6, 6, 56);
   text-decoration: none;
@@ -309,6 +314,11 @@ footer .copyright {
   display: flex;
   align-items: center;
   padding: 0 2em;
+}
+
+footer .copyright p {
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 footer .link {
@@ -363,57 +373,124 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   border-bottom: 1px solid white;
 }
 
-/*Media Queries*/
-
-/*Insane Small, I think this devise does not exist*/
-@media screen and (min-width: 1px) and (max-width: 319px) {
-  body {
-    font-size: 40%;
-  }
-}
-
-/*Phone Smaller*/
-@media screen and (min-width: 320px) and (max-width: 700px) {
-  * {
-    font-size: 80%;
-    color: rgb(0, 53, 78);
+/*MEdia Queries*/
+/*Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
   }
 
-  .link-item a {
-    font-size: 50%;
-    color: rgb(0, 104, 240);
-  }
-}
-
-/*Tablets*/
-@media screen and (min-width: 701px) and (max-width: 768px) {
-  * {
-    font-size: 90%;
-    color: red;
-  }
-}
-
-/*Laptop*/
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  * {
-    font-size: 90%;
+  h1 {
     color: red;
   }
 
-  .link-item a {
-    font-size: 90%;
-    color: yellow;
+  header {
+    width: 100vw;
+    height: 15vh;
   }
 
-  .data .data-box a p {
-    font-size: 90%;
-    color: yellow;
+  footer {
+    width: 100vw;
+    height: 10vh;
   }
 }
 
-/*Desktop Wide Screen*/
-@media screen and (min-width: 1720px) {
-  .right-content {
+/*Tablet*/
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  header nav a {
+    display: none;
+  }
+  h1 {
+    color: green;
+  }
+
+  header {
+    width: 100vw;
+    height: 15vh;
+  }
+
+  main {
+    width: 100vw; /*main*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
+
+  main .nav-main {
+    width: 100%;
+    border: none;
+  }
+
+  main .nav-main .items {
+    width: 100%;
+    border: none;
+  }
+
+  /* .nav-participate .box-participate {
+    display: inline-block;
+  } */
+
+  /* .nav-participate .box-participate a {
+    background-color: aqua;
+  } */
+  /* main .nav-main .items .btn-show {
+    border: none;
+  } */
+
+  main .nav-main .items {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  main .nav-main .items .btn-show {
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  main .nav-main .items .nav-participate .box-participate a {
+    padding: 0.2em 0.2em;
+  }
+
+  footer {
+    width: 100vw;
+    height: 10vh;
+  }
+}
+
+/*Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    width: 100vw;
+    height: 15vh;
+  }
+
+  main {
+    width: fit-content;
+    height: 75vh;
+  }
+
+  footer {
+    width: 100vw;
+    height: 10vh;
+  }
+
+  nav {
+    display: none;
+  }
+
+  h1 {
+    color: blue;
   }
 }
