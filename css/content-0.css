@@ -32,6 +32,15 @@ header .version {
   padding-top: 0.4em;
 }
 
+header .version p {
+  font-weight: 200;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+}
+header .version p span {
+  color: rgb(207, 0, 0);
+}
+
 header nav {
   width: 60%; /*nav*/
   height: 100%;
@@ -69,6 +78,11 @@ header nav a:hover {
 
 header nav a:hover::after {
   width: 100%;
+}
+
+header nav .active {
+  background-color: rgba(75, 0, 0, 0.9);
+  /* border: 2px solid white; */
 }
 
 /*MAIN*/
@@ -141,6 +155,10 @@ main .nav-main .items .data .data-box {
   display: flex;
   flex-direction: column;
   padding: 20px 20px;
+}
+
+main .nav-main .items .data .data-box .active2 {
+  color: goldenrod;
 }
 
 main .nav-main .items .data .data-box a {

@@ -30,6 +30,19 @@ header .version {
   align-items: center;
   justify-content: center;
   padding-top: 0.4em;
+  /* background-color: forestgreen; */
+}
+
+header .version p {
+  font-weight: 200;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  /* background-color: cadetblue; */
+  padding: 0 1.5em;
+  text-align: center;
+}
+header .version p span {
+  color: rgb(207, 0, 0);
 }
 
 header nav {
@@ -69,6 +82,11 @@ header nav a:hover {
 
 header nav a:hover::after {
   width: 100%;
+}
+
+header nav .active {
+  background-color: rgba(75, 0, 0, 0.9);
+  /* border: 2px solid white; */
 }
 
 /*MAIN*/
@@ -119,14 +137,16 @@ main .hero-text .participate {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* padding: 0 1.2em; */
   /* width: 35%;
   height: 70%; */
 }
 
 main .hero-text .participate a {
   text-decoration: none;
-  /* background-color: rgb(8, 9, 61); */
+  /* background-color: rgb(255, 0, 0); */
   font-weight: 600;
+  text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
   padding: 0.2em 0.4em;
@@ -164,7 +184,9 @@ main .hero-text .explore a {
   color: rgb(255, 255, 255);
   font-weight: 600;
   font-size: 1.5rem;
+  text-align: center;
   border-bottom: 2px solid white;
+  /* background-color: red; */
   /* background-color: rgb(61, 8, 8, 0.8);
   border-radius: 5px; */
   /* background-color: rgb(79, 8, 194); */
@@ -190,6 +212,11 @@ footer .copyright {
   display: flex;
   align-items: center;
   padding: 0 2em;
+}
+
+footer .copyright p {
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 footer .link {
@@ -242,4 +269,45 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover {
 
 footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   border-bottom: 1px solid white;
+}
+
+/*MEdia Queries*/
+/*Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+
+  h1 {
+    color: red;
+  }
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  header nav a {
+    display: none;
+  }
+  h1 {
+    color: green;
+  }
+}
+
+/*Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  h1 {
+    color: blue;
+  }
 }

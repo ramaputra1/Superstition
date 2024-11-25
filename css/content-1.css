@@ -1,3 +1,7 @@
+:root {
+  --nav-color: rgb(170, 128, 22);
+}
+
 body {
   font-family: "Poppins";
   font-size: 16px;
@@ -30,6 +34,15 @@ header .version {
   align-items: center;
   justify-content: center;
   padding-top: 0.4em;
+}
+
+header .version p {
+  font-weight: 200;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+}
+header .version p span {
+  color: rgb(207, 0, 0);
 }
 
 header nav {
@@ -71,6 +84,11 @@ header nav a:hover::after {
   width: 100%;
 }
 
+header nav .active {
+  background-color: rgba(75, 0, 0, 0.9);
+  /* border: 2px solid white; */
+}
+
 /*MAIN*/
 main {
   width: 100vw; /*main*/
@@ -103,14 +121,27 @@ main .content .content-box .content-box-resp {
   width: 95%;
   height: 95%;
   color: black;
-  font-family: "Playfair Display";
-
+  font-size: 0.8rem;
+  /* font-family: "Playfair Display"; */
+  font-family: "Poppins";
   /* background-color: red; */
+}
+
+main .content .content-box .content-box-resp .content-section {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem; /* Add spacing between sections */
+  padding: 1rem; /* Add padding for better readability */
+  background-color: rgba(255, 255, 255, 0.5); /* Optional background */
+  border-radius: 5px; /* Optional rounded corners */
 }
 
 main .content .content-box .content-box-resp h1 {
   width: 100%;
+  font-size: 1.2rem;
+
   height: 10%;
+  /* font-family: "Playfair Display"; */
 }
 
 main .content .content-box .content-box-resp p {
@@ -119,13 +150,44 @@ main .content .content-box .content-box-resp p {
   padding: 1em 0;
 }
 
+main .content .content-box .content-box-resp p span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 main .content .content-box .content-box-resp .sources {
   width: 100%;
   height: 20%;
   display: flex;
+
+  justify-content: center;
+  align-items: end;
+}
+
+main .content .content-box .content-box-resp .sources .sources-left {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  justify-content: center;
+  align-items: center;
+}
+
+main .content .content-box .content-box-resp .sources .sources-right {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  /* background-color: rgb(212, 139, 139); */
   flex-direction: column;
   justify-content: center;
   align-items: end;
+}
+
+main .content .content-box .content-box-resp .sources .resources {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.3em 0;
 }
 
 main .nav-main {
@@ -134,14 +196,14 @@ main .nav-main {
   display: flex;
   justify-content: center;
   align-items: end;
-
+  padding: 0e 0.5em;
   /* background-color: rgb(255, 0, 153); */
 }
 
 main .nav-main .items {
   width: 90%;
   height: 100%;
-  background-color: rgb(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   /* border-radius: 20px; */
@@ -183,7 +245,11 @@ main .nav-main .items .data .data-box {
   display: flex;
   flex-direction: column;
   padding: 20px 20px;
-  font-family: "Playfair Display";
+  /* font-family: "Playfair Display"; */
+}
+
+main .nav-main .items .data .data-box .active2 {
+  color: var(--nav-color);
 }
 
 main .nav-main .items .data .data-box a {
@@ -197,7 +263,7 @@ main .nav-main .items .data .data-box a {
   text-decoration: none;
 }
 
-main .nav-main .items .data .data-box a:hover {
+main .nav-main .items .data .data-box a p:hover {
   color: rgb(170, 128, 22);
 }
 
@@ -295,4 +361,59 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover {
 
 footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   border-bottom: 1px solid white;
+}
+
+/*Media Queries*/
+
+/*Insane Small, I think this devise does not exist*/
+@media screen and (min-width: 1px) and (max-width: 319px) {
+  body {
+    font-size: 40%;
+  }
+}
+
+/*Phone Smaller*/
+@media screen and (min-width: 320px) and (max-width: 700px) {
+  * {
+    font-size: 80%;
+    color: rgb(0, 53, 78);
+  }
+
+  .link-item a {
+    font-size: 50%;
+    color: rgb(0, 104, 240);
+  }
+}
+
+/*Tablets*/
+@media screen and (min-width: 701px) and (max-width: 768px) {
+  * {
+    font-size: 90%;
+    color: red;
+  }
+}
+
+/*Laptop*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  * {
+    font-size: 90%;
+    color: red;
+  }
+
+  .link-item a {
+    font-size: 90%;
+    color: yellow;
+  }
+
+  .data .data-box a p {
+    font-size: 90%;
+    color: yellow;
+  }
+}
+
+/*Desktop Wide Screen*/
+@media screen and (min-width: 1720px) {
+  .right-content {
+    justify-content: center;
+  }
 }
