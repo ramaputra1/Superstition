@@ -303,6 +303,18 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
     font-size: 55%;
   }
 
+  header {
+    background-color: red;
+  }
+
+  main {
+    background-color: aqua;
+  }
+
+  footer {
+    background-color: green;
+  }
+
   nav {
     display: none;
   }
