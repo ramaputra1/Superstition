@@ -281,6 +281,24 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   h1 {
     color: red;
   }
+
+  header {
+    background-color: red;
+    width: 100vw;
+    height: 15vh;
+  }
+
+  main {
+    background-color: aqua;
+    width: 100vw;
+    height: 75vh;
+  }
+
+  footer {
+    background-color: green;
+    width: 100vw;
+    height: 10vh;
+  }
 }
 
 /*Tablet*/
@@ -295,6 +313,24 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   h1 {
     color: green;
   }
+
+  header {
+    background-color: red;
+    width: 100vw;
+    height: 15vh;
+  }
+
+  main {
+    background-color: aqua;
+    width: 100vw;
+    height: 75vh;
+  }
+
+  footer {
+    background-color: green;
+    width: 100vw;
+    height: 10vh;
+  }
 }
 
 /*Phone */
@@ -305,14 +341,20 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header {
     background-color: red;
+    width: 100vw;
+    height: 15vh;
   }
 
   main {
     background-color: aqua;
+    width: 100vw;
+    height: 75vh;
   }
 
   footer {
     background-color: green;
+    width: 100vw;
+    height: 10vh;
   }
 
   nav {
