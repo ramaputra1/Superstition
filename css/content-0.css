@@ -10,6 +10,7 @@ body {
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   color: white;
+  overflow: hidden;
 }
 
 body a {
@@ -19,7 +20,7 @@ body a {
 /*HEADER*/
 header {
   width: 100vw;
-  height: 15vh;
+  height: 15svh;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -44,11 +45,12 @@ header .version p {
   padding: 0 1.5em;
   text-align: center;
 }
+
 header .version p span {
   color: rgb(207, 0, 0);
 }
 
-header nav {
+header .navbar {
   width: 60%; /*nav*/
   height: 100%;
   display: flex;
@@ -59,7 +61,7 @@ header nav {
   padding-top: 0.4em;
 }
 
-header nav a {
+header .navbar a {
   display: block; /*nav a*/
   text-decoration: none;
   font-size: 1.2rem;
@@ -68,7 +70,7 @@ header nav a {
   position: relative;
 }
 
-header nav a::after {
+header .navbar a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -79,17 +81,23 @@ header nav a::after {
   transition: width 0.2s ease-in-out;
 }
 
-header nav a:hover {
+header .navbar a:hover {
   text-shadow: 0.5px 0 0.5px white;
 }
 
-header nav a:hover::after {
+header .navbar a:hover::after {
   width: 100%;
 }
 
-header nav .active {
+header .navbar .active {
   background-color: rgba(75, 0, 0, 0.9);
   /* border: 2px solid white; */
+}
+
+header #nav-extra {
+  display: none;
+  margin: 2.5em;
+  font-size: 2rem;
 }
 
 /*TABLEEEEE STARTTT*/
@@ -136,7 +144,7 @@ header nav .active {
 /*MAIN*/
 main {
   width: 100vw; /*main*/
-  height: 75vh;
+  height: 75svh;
   display: flex;
   /* background-color: aqua; */
 }
@@ -179,7 +187,12 @@ main .content .content-box .content-box-resp .content-section {
   border-radius: 5px; /* Optional rounded corners */
 }
 
-main .content .content-box .content-box-resp h1 {
+main .content .content-box .content-box-resp .cs-top {
+  width: 100%;
+  height: 10%;
+}
+
+main .content .content-box .content-box-resp .cs-top h1 {
   width: 100%;
   font-size: 1.2rem;
 
@@ -187,24 +200,34 @@ main .content .content-box .content-box-resp h1 {
   /* font-family: "Playfair Display"; */
 }
 
-main .content .content-box .content-box-resp p {
+main .content .content-box .content-box-resp .cs-middle {
+  width: 100%;
+  height: 70%;
+}
+
+main .content .content-box .content-box-resp .cs-middle p {
   width: 100%;
   height: 70%;
   padding: 1em 0;
 }
 
-main .content .content-box .content-box-resp p span {
+/* main .content .content-box .content-box-resp p span {
   font-size: 1.2rem;
   font-weight: bold;
+} */
+
+main .content .content-box .content-box-resp .cs-bottom {
+  width: 100%;
+  height: 20%;
 }
 
-main .content .content-box .content-box-resp .sources {
+main .content .content-box .content-box-resp .cs-bottom .sources {
   width: 100%;
   height: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: end;
+  align-items: start;
 }
 
 main .content .content-box .content-box-resp .sources h1 {
@@ -347,7 +370,7 @@ main .nav-main .items .nav-participate .box-participate a:hover {
 /*FOOTER*/
 footer {
   width: 100vw;
-  height: 10vh;
+  height: 10svh;
   display: flex;
   background-color: rgb(0, 0, 0, 0.7);
 }
@@ -421,7 +444,7 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 /*Laptop */
 @media (max-width: 1366px) {
   html {
-    font-size: 75%;
+    font-size: 65%;
   }
 
   h1 {
@@ -430,12 +453,34 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header {
     width: 100vw;
-    height: 15vh;
+    height: 15svh;
+  }
+
+  main {
+    width: 100%;
+    height: 75svh;
   }
 
   footer {
     width: 100vw;
-    height: 10vh;
+    height: 10svh;
+  }
+
+  .cs-top {
+    height: fit-content;
+    /* background-color: blue; */
+  }
+  .cs-middle {
+    height: fit-content;
+    /* background-color: blanchedalmond; */
+    /* display: flex;
+    align-items: center; */
+  }
+  .cs-bottom {
+    height: fit-content;
+    display: flex;
+    align-items: start;
+    /* background-color: yellowgreen; */
   }
 }
 
@@ -454,20 +499,58 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header {
     width: 100vw;
-    height: 15vh;
+    height: 15svh;
   }
 
   main {
     width: 100vw; /*main*/
-    height: 75vh;
-    display: flex;
-    flex-direction: column;
+    height: 75svh;
+    /* display: flex; */
+    /* flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: aqua; */
+    background-color: aqua; */
+  }
+
+  main .content {
+    width: 95%;
+    /* height: fit-content; */
   }
 
   main .nav-main {
+    display: none;
+  }
+
+  header .version {
+    width: 80%;
+
+    justify-content: start;
+  }
+
+  header .navbar {
+    position: absolute;
+    /* top: 100%; */
+    /* right: -100%; */
+    /* left: 0; */
+    right: -100%;
+    margin: 0;
+    top: 15%;
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 20rem;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header .navbar.expand {
+    right: 0;
+  }
+
+  header #nav-extra {
+    display: inline-block;
+  }
+
+  /* main .nav-main {
     width: 100%;
     border: none;
   }
@@ -475,7 +558,7 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   main .nav-main .items {
     width: 100%;
     border: none;
-  }
+  } */
 
   /* .nav-participate .box-participate {
     display: inline-block;
@@ -487,7 +570,7 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   /* main .nav-main .items .btn-show {
     border: none;
   } */
-
+  /* 
   main .nav-main .items {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -501,11 +584,11 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   main .nav-main .items .nav-participate .box-participate a {
     padding: 0.2em 0.2em;
-  }
+  } */
 
   footer {
     width: 100vw;
-    height: 10vh;
+    height: 10svh;
   }
 }
 
@@ -517,21 +600,55 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header {
     width: 100vw;
-    height: 15vh;
+    height: 15svh;
   }
 
   main {
-    width: fit-content;
-    height: 11\20vh;
+    width: 100vw;
+    height: 75svh;
+  }
+
+  main .content {
+    width: 95%;
+    height: 100%;
+  }
+
+  main .nav-main {
+    display: none;
   }
 
   footer {
     width: 100vw;
-    height: 10vh;
+    height: 10svh;
   }
 
-  nav {
-    display: none;
+  header .version {
+    width: 80%;
+
+    justify-content: start;
+  }
+
+  header nav {
+    position: absolute;
+    /* top: 100%; */
+    /* right: -100%; */
+    /* left: 0; */
+    right: -100%;
+    margin: 0;
+    top: 15%;
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 20rem;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header .navbar.expand {
+    right: 0;
+  }
+
+  header #nav-extra {
+    display: inline-block;
   }
 
   h1 {

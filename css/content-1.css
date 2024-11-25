@@ -10,6 +10,7 @@ body {
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   color: white;
+  overflow: hidden;
 }
 
 body a {
@@ -19,7 +20,7 @@ body a {
 /*HEADER*/
 header {
   width: 100vw;
-  height: 15vh;
+  height: 15svh;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -48,8 +49,8 @@ header .version p span {
   color: rgb(207, 0, 0);
 }
 
-header nav {
-  width: 60%; /*nav*/
+header .navbar {
+  width: 60%; /*.navbar*/
   height: 100%;
   display: flex;
   gap: 4em;
@@ -59,8 +60,8 @@ header nav {
   padding-top: 0.4em;
 }
 
-header nav a {
-  display: block; /*nav a*/
+header .navbar a {
+  display: block; /*.navbar a*/
   text-decoration: none;
   font-size: 1.2rem;
   color: rgb(255, 255, 255);
@@ -68,7 +69,7 @@ header nav a {
   position: relative;
 }
 
-header nav a::after {
+header .navbar a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -79,23 +80,29 @@ header nav a::after {
   transition: width 0.2s ease-in-out;
 }
 
-header nav a:hover {
+header .navbar a:hover {
   text-shadow: 0.5px 0 0.5px white;
 }
 
-header nav a:hover::after {
+header .navbar a:hover::after {
   width: 100%;
 }
 
-header nav .active {
+header .navbar .active {
   background-color: rgba(75, 0, 0, 0.9);
   /* border: 2px solid white; */
+}
+
+header #nav-extra {
+  display: none;
+  margin: 2.5em;
+  font-size: 2rem;
 }
 
 /*MAIN*/
 main {
   width: 100vw; /*main*/
-  height: 75vh;
+  height: 75svh;
   display: flex;
   /* background-color: aqua; */
 }
@@ -138,32 +145,54 @@ main .content .content-box .content-box-resp .content-section {
   border-radius: 5px; /* Optional rounded corners */
 }
 
-main .content .content-box .content-box-resp h1 {
+main .content .content-box .content-box-resp .content-section .cs-top {
+  width: 100%;
+  height: 10%;
+}
+
+main .content .content-box .content-box-resp .content-section .cs-top h1 {
   width: 100%;
   font-size: 1.2rem;
 
-  height: 10%;
+  /* height: 10%; */
   /* font-family: "Playfair Display"; */
 }
 
-main .content .content-box .content-box-resp p {
+main .content .content-box .content-box-resp .content-section .cs-middle {
   width: 100%;
   height: 70%;
+}
+
+main .content .content-box .content-box-resp .content-section .cs-middle p {
+  /* width: 100%;
+  height: 70%; */
   padding: 1em 0;
 }
 
-main .content .content-box .content-box-resp p span {
+main
+  .content
+  .content-box
+  .content-box-resp
+  .content-section
+  .cs-middle
+  p
+  span {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
+main .content .content-box .content-box-resp .content-section .cs-bottom {
+  height: 20%;
+  /* background-color: aqua; */
+}
+
 main .content .content-box .content-box-resp .sources {
   width: 100%;
-  height: 20%;
+  height: 100%;
   display: flex;
 
   justify-content: center;
-  align-items: end;
+  /* align-items: end; */
 }
 
 main .content .content-box .content-box-resp .sources .sources-left {
@@ -183,6 +212,7 @@ main .content .content-box .content-box-resp .sources .sources-right {
   /* background-color: rgb(212, 139, 139); */
   flex-direction: column;
   justify-content: center;
+  margin-right: 1em;
   align-items: end;
 }
 
@@ -303,7 +333,7 @@ main .nav-main .items .nav-participate .box-participate a:hover {
 /*FOOTER*/
 footer {
   width: 100vw;
-  height: 10vh;
+  height: 10svh;
   display: flex;
   background-color: rgb(0, 0, 0, 0.7);
 }
@@ -386,12 +416,12 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header {
     width: 100vw;
-    height: 15vh;
+    height: 15svh;
   }
 
   footer {
     width: 100vw;
-    height: 10vh;
+    height: 10svh;
   }
 }
 
@@ -410,27 +440,52 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header {
     width: 100vw;
-    height: 15vh;
+    height: 15svh;
   }
 
   main {
-    width: 100vw; /*main*/
+    width: 100vw;
     height: 75svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background-color: aqua; */
+
+    align-items: start;
+  }
+
+  main .content {
+    width: 95%;
+    height: 75svh;
   }
 
   main .nav-main {
-    width: 100%;
-    border: none;
+    display: none;
   }
 
-  main .nav-main .items {
-    width: 100%;
-    border: none;
+  header .version {
+    width: 80%;
+
+    justify-content: start;
+  }
+
+  header .navbar {
+    position: absolute;
+    /* top: 100%; */
+    /* right: -100%; */
+    /* left: 0; */
+    right: -100%;
+    margin: 0;
+    top: 15%;
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 20rem;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header .navbar.expand {
+    right: 0;
+  }
+
+  header #nav-extra {
+    display: inline-block;
   }
 
   /* .nav-participate .box-participate {
@@ -444,7 +499,7 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
     border: none;
   } */
 
-  main .nav-main .items {
+  /* main .nav-main .items {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
@@ -457,11 +512,11 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   main .nav-main .items .nav-participate .box-participate a {
     padding: 0.2em 0.2em;
-  }
+  } */
 
   footer {
     width: 100vw;
-    height: 10vh;
+    height: 10svh;
   }
 }
 
@@ -473,21 +528,61 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header {
     width: 100vw;
-    height: 15vh;
+    height: 15svh;
   }
 
   main {
-    width: fit-content;
-    height: 75vh;
+    width: 100vw;
+    height: 75svh;
+
+    align-items: start;
+  }
+
+  main .content {
+    width: 95%;
+    height: 75svh;
+  }
+
+  main .nav-main {
+    display: none;
   }
 
   footer {
     width: 100vw;
-    height: 10vh;
+    height: 10svh;
   }
 
   nav {
     display: none;
+  }
+
+  header .version {
+    width: 80%;
+
+    justify-content: start;
+  }
+
+  header nav {
+    position: absolute;
+    /* top: 100%; */
+    /* right: -100%; */
+    /* left: 0; */
+    right: -100%;
+    margin: 0;
+    top: 15%;
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 20rem;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header .navbar.expand {
+    right: 0;
+  }
+
+  header #nav-extra {
+    display: inline-block;
   }
 
   h1 {

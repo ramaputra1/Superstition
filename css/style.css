@@ -7,7 +7,8 @@ body {
   background-repeat: no-repeat; /* Prevents the image from repeating */
   color: white;
   height: 100svh;
-  /* overflow: hidden;  */
+  width: 100vw;
+  overflow: hidden;
 }
 
 body a {
@@ -32,7 +33,6 @@ header .version {
   align-items: center;
   justify-content: center;
   padding-top: 0.4em;
-  /* background-color: forestgreen; */
 }
 
 header .version p {
@@ -47,7 +47,7 @@ header .version p span {
   color: rgb(207, 0, 0);
 }
 
-header nav {
+header .navbar {
   width: 60%; /*nav*/
   height: 100%;
   display: flex;
@@ -58,7 +58,7 @@ header nav {
   padding-top: 0.4em;
 }
 
-header nav a {
+header .navbar a {
   display: block; /*nav a*/
   text-decoration: none;
   font-size: 1.2rem;
@@ -67,7 +67,7 @@ header nav a {
   position: relative;
 }
 
-header nav a::after {
+header .navbar a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -78,17 +78,23 @@ header nav a::after {
   transition: width 0.2s ease-in-out;
 }
 
-header nav a:hover {
+header .navbar a:hover {
   text-shadow: 0.5px 0 0.5px white;
 }
 
-header nav a:hover::after {
+header .navbar a:hover::after {
   width: 100%;
 }
 
-header nav .active {
+header .navbar .active {
   background-color: rgba(75, 0, 0, 0.9);
   /* border: 2px solid white; */
+}
+
+header #nav-extra {
+  display: none;
+  margin: 2.5em;
+  font-size: 2rem;
 }
 
 /*MAIN*/
@@ -277,7 +283,7 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 /*Laptop */
 @media (max-width: 1366px) {
   html {
-    font-size: 75%;
+    font-size: 80%;
   }
 
   h1 {
@@ -303,22 +309,51 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 /*Tablet*/
 @media (max-width: 768px) {
   html {
-    font-size: 62.5%;
+    font-size: 72.5%;
   }
 
-  header nav a {
-    display: none;
-  }
   h1 {
-    color: green;
+    color: rgb(255, 255, 255);
   }
 
-  header {
+  /* header {
     width: 100vw;
     height: 15svh;
+  } */
+  /* header {
+    width: 100%;
+  } */
+
+  header .version {
+    width: 80%;
+
+    justify-content: start;
   }
 
-  main {
+  header .navbar {
+    position: absolute;
+    /* top: 100%; */
+    /* right: -100%; */
+    /* left: 0; */
+    right: -100%;
+    margin: 0;
+    top: 15%;
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 20rem;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header .navbar.expand {
+    right: 0;
+  }
+
+  header #nav-extra {
+    display: inline-block;
+  }
+
+  /* main {
     width: 100vw;
     height: 75svh;
   }
@@ -326,15 +361,20 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   footer {
     width: 100vw;
     height: 10svh;
-  }
+  } */
 }
 
 /*Phone */
 @media (max-width: 450px) {
   html {
-    font-size: 55%;
+    font-size: 65%;
   }
 
+  body {
+    height: 100svh;
+    width: 100vw;
+  }
+  /* 
   header {
     width: 100vw;
     height: 15svh;
@@ -347,14 +387,43 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   footer {
     width: 100vw;
-    height: 10svh;
-  }
-
-  nav {
-    display: none;
-  }
+    height: 75svh;
+  } */
 
   h1 {
     color: blue;
   }
+
+  header .version {
+    width: 80%;
+
+    justify-content: start;
+  }
+
+  header nav {
+    position: absolute;
+    /* top: 100%; */
+    /* right: -100%; */
+    /* left: 0; */
+    right: -100%;
+    margin: 0;
+    top: 15%;
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 20rem;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header .navbar.expand {
+    right: 0;
+  }
+
+  header #nav-extra {
+    display: inline-block;
+  }
+
+  /* footer {
+    background-color: beige;
+  } */
 }
