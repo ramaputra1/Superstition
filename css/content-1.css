@@ -258,7 +258,7 @@ main .nav-main .items .data .data-box .active2 {
 
 main .nav-main .items .data .data-box a {
   color: rgb(0, 0, 0);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.9rem;
   /* font-style: italic; */
   line-height: 250%;
@@ -297,7 +297,7 @@ main .nav-main .items .nav-participate .box-participate a {
 }
 
 main .nav-main .items .nav-participate .box-participate a:hover {
-  background-color: rgb(2, 2, 87);
+  background-color: rgb(23, 23, 129);
 }
 
 /*FOOTER*/

@@ -6,6 +6,8 @@ body {
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   color: white;
+  height: 100svh;
+  overflow: hidden; /* Mencegah scrolling */
 }
 
 body a {
@@ -283,19 +285,16 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   }
 
   header {
-    background-color: red;
     width: 100vw;
     height: 15vh;
   }
 
   main {
-    background-color: aqua;
     width: 100vw;
     height: 75vh;
   }
 
   footer {
-    background-color: green;
     width: 100vw;
     height: 10vh;
   }
@@ -315,19 +314,16 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   }
 
   header {
-    background-color: red;
     width: 100vw;
     height: 15vh;
   }
 
   main {
-    background-color: aqua;
     width: 100vw;
     height: 75vh;
   }
 
   footer {
-    background-color: green;
     width: 100vw;
     height: 10vh;
   }
@@ -340,19 +336,16 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   }
 
   header {
-    background-color: red;
     width: 100vw;
     height: 15vh;
   }
 
   main {
-    background-color: aqua;
     width: 100vw;
     height: 75vh;
   }
 
   footer {
-    background-color: green;
     width: 100vw;
     height: 10vh;
   }
