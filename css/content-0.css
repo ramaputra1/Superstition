@@ -96,7 +96,13 @@ header .navbar .active {
 
 header #nav-extra {
   display: none;
-  margin: 2.5em;
+  margin: 0.5em;
+  font-size: 2rem;
+}
+
+header #content-btn-extra {
+  display: none;
+  margin: 1.5em;
   font-size: 2rem;
 }
 
@@ -507,6 +513,10 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
     height: 75svh;
   }
 
+  header #content-btn-extra {
+    display: inline-block;
+  }
+
   main .content {
     width: 97%;
 
@@ -539,6 +549,24 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   }
 
   header .navbar.expand {
+    display: inline;
+  }
+
+  main .nav-main {
+    position: absolute;
+
+    right: 0;
+    margin: 0;
+    top: 15%;
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 20rem;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+  }
+
+  main .nav-main.expand2 {
     display: inline;
   }
 
