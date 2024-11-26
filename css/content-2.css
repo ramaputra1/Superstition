@@ -458,6 +458,10 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
     font-size: 72.5%;
   }
 
+  body {
+    overflow: scroll;
+  }
+
   header nav a {
     display: none;
   }
@@ -546,6 +550,10 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 @media (max-width: 480px) {
   html {
     font-size: 55%;
+  }
+
+  body {
+    overflow: scroll;
   }
 
   header {
