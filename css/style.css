@@ -6,7 +6,7 @@ body {
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   color: white;
-  height: 100svh;
+  height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
@@ -18,7 +18,7 @@ body a {
 /*HEADER*/
 header {
   width: 100vw;
-  height: 15svh;
+  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -100,7 +100,7 @@ header #nav-extra {
 /*MAIN*/
 main {
   width: 100vw; /*main*/
-  height: 75svh;
+  height: 75vh;
 }
 
 main .hero-text {
@@ -209,7 +209,7 @@ main .hero-text .explore a:hover {
 /*FOOTER*/
 footer {
   width: 100vw;
-  height: 10svh;
+  height: 10vh;
   display: flex;
   background-color: rgb(0, 0, 0, 0.7);
 }
@@ -286,6 +286,10 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
     font-size: 80%;
   }
 
+  body {
+    overflow: hidden;
+  }
+
   h1 {
     color: red;
   }
@@ -312,29 +316,28 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
     font-size: 72.5%;
   }
 
-  h1 {
-    color: rgb(255, 255, 255);
+  body {
+    width: 100vw;
+    height: 100svh;
+    overflow: hidden;
   }
 
-  /* header {
+  h1 {
+    color: rgb(0, 255, 106);
+  }
+
+  header {
     width: 100vw;
     height: 15svh;
-  } */
-  /* header {
-    width: 100%;
-  } */
+  }
 
   header .version {
     width: 80%;
-
     justify-content: start;
   }
 
   header .navbar {
     position: absolute;
-    /* top: 100%; */
-    /* right: -100%; */
-    /* left: 0; */
     right: 0;
     margin: 0;
     top: 15%;
@@ -343,6 +346,7 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
     height: 75vh;
     flex-direction: column;
     justify-content: center;
+    display: inline;
     display: none;
   }
 
@@ -354,33 +358,6 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
     display: inline-block;
   }
 
-  /* main {
-    width: 100vw;
-    height: 75svh;
-  }
-
-  footer {
-    width: 100vw;
-    height: 10svh;
-  } */
-}
-
-/*Phone */
-@media (max-width: 450px) {
-  html {
-    font-size: 65%;
-  }
-
-  body {
-    height: 100svh;
-    width: 100vw;
-  }
-  /* 
-  header {
-    width: 100vw;
-    height: 15svh;
-  }
-
   main {
     width: 100vw;
     height: 75svh;
@@ -388,43 +365,64 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   footer {
     width: 100vw;
-    height: 75svh;
-  } */
+    height: 10svh;
+  }
+}
+
+/*Phone */
+@media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+  body {
+    width: 100vw;
+    height: 100svh;
+    overflow: hidden;
+  }
 
   h1 {
-    color: blue;
+    color: rgb(17, 0, 255);
+  }
+
+  header {
+    width: 100vw;
+    height: 15svh;
   }
 
   header .version {
     width: 80%;
-
     justify-content: start;
   }
 
-  header nav {
+  header .navbar {
     position: absolute;
-    /* top: 100%; */
-    /* right: -100%; */
-    /* left: 0; */
-    right: -100%;
+    right: -5%;
     margin: 0;
     top: 15%;
     background-color: rgb(0, 0, 0, 0.8);
     width: 20rem;
-    height: 75vh;
+    height: 75svh;
     flex-direction: column;
     justify-content: center;
+    display: inline;
+    display: none;
   }
 
   header .navbar.expand {
-    right: 0;
+    display: inline;
   }
 
   header #nav-extra {
     display: inline-block;
   }
 
-  /* footer {
-    background-color: beige;
-  } */
+  main {
+    width: 100vw;
+    height: 75%;
+  }
+
+  footer {
+    width: 100vw;
+    height: 10%;
+  }
 }

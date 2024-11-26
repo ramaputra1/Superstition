@@ -467,9 +467,6 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header .navbar {
     position: absolute;
-    /* top: 100%; */
-    /* right: -100%; */
-    /* left: 0; */
     right: -100%;
     margin: 0;
     top: 15%;
@@ -487,32 +484,6 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   header #nav-extra {
     display: inline-block;
   }
-
-  /* .nav-participate .box-participate {
-    display: inline-block;
-  } */
-
-  /* .nav-participate .box-participate a {
-    background-color: aqua;
-  } */
-  /* main .nav-main .items .btn-show {
-    border: none;
-  } */
-
-  /* main .nav-main .items {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  main .nav-main .items .btn-show {
-    border: 1px solid rgb(0, 0, 0, 0.3);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  main .nav-main .items .nav-participate .box-participate a {
-    padding: 0.2em 0.2em;
-  } */
 
   footer {
     width: 100vw;
@@ -564,9 +535,7 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header nav {
     position: absolute;
-    /* top: 100%; */
-    /* right: -100%; */
-    /* left: 0; */
+
     right: -100%;
     margin: 0;
     top: 15%;
