@@ -6,9 +6,9 @@ body {
   font-family: "Poppins";
   font-size: 16px;
   background-image: url(../img/bg-1.png);
-  background-size: cover; /* Ensures the image covers the whole background */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   overflow: hidden;
 }
@@ -90,8 +90,8 @@ header .navbar a:hover::after {
 }
 
 header .navbar .active {
-  background-color: rgba(75, 0, 0, 0.9);
-  /* border: 2px solid white; */
+  background-color: rgba(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 header #nav-extra {
@@ -118,7 +118,7 @@ header #content-btn-extra {
 }
 
 .data-table thead tr {
-  background-color: #009879;
+  background-color: rgb(207, 0, 0);
   color: #ffffff;
   text-align: left;
 }
@@ -187,10 +187,10 @@ main .content .content-box .content-box-resp {
 main .content .content-box .content-box-resp .content-section {
   width: 100%;
   height: 100%;
-  margin-bottom: 1rem; /* Add spacing between sections */
-  padding: 1rem; /* Add padding for better readability */
-  background-color: rgba(255, 255, 255, 0.5); /* Optional background */
-  border-radius: 5px; /* Optional rounded corners */
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
 }
 
 main .content .content-box .content-box-resp .cs-top {
@@ -237,7 +237,7 @@ main .content .content-box .content-box-resp .cs-bottom .sources {
 }
 
 main .content .content-box .content-box-resp .sources h1 {
-  margin: 1.1em 0;
+  margin: 0.6em 0;
   text-decoration: underline;
 }
 
@@ -373,6 +373,12 @@ main .nav-main .items .nav-participate .box-participate a:hover {
   background-color: rgb(23, 23, 129);
 }
 
+main .cs-bottom p a {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  font-style: italic;
+}
+
 /*FOOTER*/
 footer {
   width: 100vw;
@@ -453,10 +459,6 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
     font-size: 65%;
   }
 
-  h1 {
-    color: red;
-  }
-
   header {
     width: 100vw;
     height: 15svh;
@@ -503,13 +505,14 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
   header nav a {
     display: none;
   }
-  h1 {
-    color: green;
-  }
 
   header {
     width: 100vw;
     height: 15svh;
+  }
+
+  #nav-extra i {
+    color: rgb(88, 88, 88);
   }
 
   main {
@@ -530,6 +533,18 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   main .nav-main {
     display: none;
+  }
+
+  main .nav-main .items {
+    background-color: transparent;
+  }
+
+  main .nav-main .items .btn-show button {
+    padding: 0.5em 0.5em;
+  }
+
+  main .nav-main .items .data .data-box a {
+    color: rgb(255, 255, 255);
   }
 
   header .version {
@@ -645,9 +660,5 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
 
   header #nav-extra {
     display: inline-block;
-  }
-
-  h1 {
-    color: blue;
   }
 }

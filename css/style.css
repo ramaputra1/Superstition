@@ -2,9 +2,9 @@ body {
   font-family: "Poppins";
   font-size: 16px;
   background-image: url(../img/fergio.jpg);
-  background-size: cover; /* Ensures the image covers the whole background */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   height: 100vh;
   width: 100vw;
@@ -56,6 +56,7 @@ header .navbar {
   align-items: center;
   margin-right: 4em;
   padding-top: 0.4em;
+  z-index: 999;
 }
 
 header .navbar a {
@@ -87,8 +88,8 @@ header .navbar a:hover::after {
 }
 
 header .navbar .active {
-  background-color: rgba(75, 0, 0, 0.9);
-  /* border: 2px solid white; */
+  background-color: rgba(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 header #nav-extra {
@@ -101,6 +102,25 @@ header #nav-extra {
 main {
   width: 100vw; /*main*/
   height: 75vh;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.hero-text {
+  animation: fadeIn 2s forwards;
+}
+
+.version {
+  animation: fadeIn 4.5s forwards;
 }
 
 main .hero-text {
@@ -171,7 +191,8 @@ main .hero-text .participate a {
 main .hero-text .participate a:hover {
   /* background-color: rgba(14, 16, 100, 0.8); */
 
-  color: goldenrod;
+  background-color: white;
+  color: black;
 }
 
 main .hero-text .explore {
@@ -203,7 +224,8 @@ main .hero-text .explore a {
 
 main .hero-text .explore a:hover {
   /* background-color: rgba(94, 14, 14, 0.8); */
-  color: goldenrod;
+  background-color: white;
+  color: black;
 }
 
 /*FOOTER*/
@@ -290,10 +312,6 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
     overflow: hidden;
   }
 
-  h1 {
-    color: red;
-  }
-
   header {
     width: 100vw;
     height: 15svh;
@@ -320,10 +338,6 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
     width: 100vw;
     height: 100svh;
     overflow: scroll;
-  }
-
-  h1 {
-    color: rgb(0, 255, 106);
   }
 
   header {
@@ -378,10 +392,6 @@ footer .link .link-item:nth-child(3) a:nth-child(1):hover ~ a:nth-child(2) {
     width: 100vw;
     height: 100svh;
     overflow: scroll;
-  }
-
-  h1 {
-    color: rgb(17, 0, 255);
   }
 
   header {
